@@ -57,6 +57,7 @@ pipeline{
     } catch(e) {
         build_ok = false
         echo e.toString()  
+    }
       /*  stage('Static code analysis'){
             
             steps{
