@@ -52,7 +52,7 @@ pipeline{
                     
                    }
                     
-                }
+                
 
     } catch(e) {
         build_ok = false
