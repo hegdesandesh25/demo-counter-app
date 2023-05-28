@@ -45,7 +45,7 @@ pipeline{
             }
         }
         
-stages {
+
     stage('Build and Sonar Analysis') {
         steps {
             script {
@@ -57,7 +57,7 @@ stages {
                 }
             }
         }
-    }
+    
 }
         /*
         stage('Static code analysis'){ 
