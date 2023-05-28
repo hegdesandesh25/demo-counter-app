@@ -44,7 +44,7 @@ pipeline{
                 }
             }
         }
-        
+        stage('Static code analysis'){ 
             try{
                   script{
                                           
@@ -58,6 +58,7 @@ pipeline{
         build_ok = false
         echo e.toString()  
     }
+        }
       /*  stage('Static code analysis'){
             
             steps{
