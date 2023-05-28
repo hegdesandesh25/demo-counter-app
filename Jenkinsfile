@@ -44,6 +44,21 @@ pipeline{
                 }
             }
         }
+        
+stages {
+    stage('Build and Sonar Analysis') {
+        steps {
+            script {
+                try {
+                    bat "mvn clean package sonar:sonar -Dsonar.projectKey=demo-counter-app -Dsonar.projectName='demo-counter-app' -Dsonar.login=%sonar-token%"
+                } catch (e) {
+                    build_ok = false
+                    echo e.toString()
+                }
+            }
+        }
+    }
+        /*
         stage('Static code analysis'){ 
             try{
                   script{
@@ -59,7 +74,7 @@ pipeline{
         echo e.toString()  
     }
         }
-      /*  stage('Static code analysis'){
+       stage('Static code analysis'){
             
             steps{
                 
