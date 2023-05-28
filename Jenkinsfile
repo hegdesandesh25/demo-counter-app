@@ -58,6 +58,7 @@ stages {
             }
         }
     }
+}
         /*
         stage('Static code analysis'){ 
             try{
